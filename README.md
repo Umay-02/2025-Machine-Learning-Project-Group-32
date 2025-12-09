@@ -25,13 +25,20 @@ We used different methods for different reasons to perfect our model. We used ma
 Our database: org_compliance_data.db
 
 **1. Data Extraction:** we loaded SQLite database by using sqlite library. We extracted all tables and saved contents to .txt format
+
 **2. Exploratory Analysis:** We analyzed basic dimensions of the department table and generated many .pdf files to have graphs like histograms, missing value plots, and heatmaps.
+
 **3.  Data Cleaning:** We dropped 30 columns with >40.06% missingness. That particular is from mean of the previous graphs of the missing values -we decided that taking the avarage of missing values among the departments would be a great option to choose a threshold to have a much cleaner outcome. We then imputed mean values for the values of "audit_score_q1", "audit_score_q2", "compliance_score_final"
+
 **4. Feature Engineering:** composite_complianc_score --> average of the 3 compliance features.
 risk_index --> 100-composite score --> higher means riskier
+
 **5. Anomaly detection:** We used IQR method to detect outlier departments in terms of risk.
+
 **6. Clustering:** we scaled 4 features using StandardScaler, used Elbow Method to determine K value for K-means (K=3), and then applied K-means clustering and assigned each department to a risk_cluster.
+
 **7. Evaluation:** We evaluated clustering quality using the Silhoutte Score.
+
 **8. Recommendation Engine:** For high-risk outliers, we generated actions recommendations based on conditions like poor audit scores, low engagement, and financial abnormalities.
 
 **SECTION 3: EXPERIMENTAL DESIGN:**
