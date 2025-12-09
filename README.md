@@ -8,6 +8,9 @@ The outcome should go beyond prediction, our analysis has combine statistical re
 GROUP MEMBERS:
 Azra Dila Caglayan 321911
 
+
+
+
 **SECTION 1: OUR INTRODUCTION**
 Our project aims to analyze department-level organizational compliance data from an SQLite database by using a complete machine learning pipeline. The main goal is to identify risk patterns across departments and generate interpretable insights using unsupervised learning and exploratory data techniques.
 
