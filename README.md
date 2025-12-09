@@ -4,6 +4,10 @@ _"As part of a research initiative on corporate integrity and operational risk, 
 Our task is to design a data-driven analytical framework capable of identifying signals of porential non-compliance, surfaxing key explanatory factors, and supporting evidence-based recommendations for risk mitigation.
 The outcome should go beyond prediction, our analysis has combine statistical reasoning, ethical insight, and practical recommendations, enabling the organization to strengthen its internal accountability processes."_
 
+
+##GROUP MEMBERS:
+Azra Dila Caglayan 321911
+
 **SECTION 1: OUR INTRODUCTION**
 Our project aims to analyze department-level organizational compliance data from an SQLite database by using a complete machine learning pipeline. The main goal is to identify risk patterns across departments and generate interpretable insights using unsupervised learning and exploratory data techniques.
 
