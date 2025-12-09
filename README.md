@@ -5,7 +5,7 @@ Our task is to design a data-driven analytical framework capable of identifying 
 The outcome should go beyond prediction, our analysis has combine statistical reasoning, ethical insight, and practical recommendations, enabling the organization to strengthen its internal accountability processes."_
 
 
-#GROUP MEMBERS:
+GROUP MEMBERS:
 Azra Dila Caglayan 321911
 
 **SECTION 1: OUR INTRODUCTION**
