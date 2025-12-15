@@ -6,10 +6,10 @@ The outcome should go beyond prediction, our analysis has combine statistical re
 
 
 GROUP MEMBERS:
-Azra Dila Caglayan 321911
-Can Basara 323231
-Yagiz Efe Demir 314841
-Lorenzo di Somma 318791
+Azra Dila Caglayan 321911 |
+Can Basara 323231 |
+Yagiz Efe Demir 314841 |
+Lorenzo di Somma 318791 |
 
 
 
