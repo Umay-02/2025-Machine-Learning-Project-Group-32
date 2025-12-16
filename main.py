@@ -54,7 +54,7 @@ with open("Clean_Database_Output.txt", "w", encoding="utf-8") as f:
 
         if not df.empty: #checks if the table has any data (non-empty)
             f.write("="*80 + "\n") #writes a horizontal line of 80 equal signs
-            f.write(f"TABLO: {table.upper()}\n") #writes the table name
+            f.write(f"TABLE: {table.upper()}\n") #writes the table name
             f.write("="*80 + "\n\n") #one more separator line and an empty line
             f.write(df.to_string(index=False)) #converts the dataframe to a text format like an actual table
             f.write("\n\n\n") #adding some spaces between the tables
@@ -325,7 +325,7 @@ plt.title('Correlation Matrix Between Numerical Attributes')
 plt.tight_layout()
 plt.savefig('correlation_heatmap.pdf')
 plt.show()
-print("Korelasyon ısı haritası 'correlation_heatmap.pdf' olarak kaydedildi.")
+print("Correlation heatmap saved as 'correlation_heatmap.pdf'.")
 
 print("\nCorrelation with 'composite_compliance_score':")
 print(correlation_matrix['composite_compliance_score'].sort_values(ascending=False))
@@ -490,7 +490,7 @@ print("Correlation heatmap is saved as 'correlation_heatmap.pdf' in .pdf format.
 print("\nCorrelations with 'composite_compliance_score':")
 print(correlation_matrix['composite_compliance_score'].sort_values(ascending=False))
 
-print("\n'risk_index' ile Korelasyonlar:")
+print("\n'risk_index' with Correlations:")
 print(correlation_matrix['risk_index'].sort_values(ascending=False))
 
 '''
