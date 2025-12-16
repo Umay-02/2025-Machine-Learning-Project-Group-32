@@ -848,7 +848,8 @@ if "engagement_score" in df.columns:
     plt.ylabel("Risk Index")
     plt.tight_layout()
     plt.show()
-
+else:
+    print("engagement score not avaible. scatter plot not generated")
 
 
 # 4.7) Narrative report generation
