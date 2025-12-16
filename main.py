@@ -2,8 +2,6 @@
 import sqlite3
 import os
 import pandas as pd
-import sqlite3
-import os
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import StandardScaler
@@ -133,17 +131,16 @@ missing[missing>0]
 
 
 #Missing data percantage PDF-making
-missing = (departments_df.isnull().mean()*100).sort_values(ascending=False)
-missing_nonzero = missing[missing>0]
+missing = (departments_df.isnull().mean() * 100).sort_values(ascending=False)
+missing_nonzero = missing[missing > 0]
 
-plt.figure(figsize=(12,8))
+plt.figure(figsize=(12, 8))
 plt.barh(missing_nonzero.index, missing_nonzero.values, color="red")
-plt.xlabel("% of Mssing values")
-plt.title("missing data percentage by feature")
+plt.xlabel("% of Missing Values")
+plt.title("Missing Data Percentage by Feature")
 plt.gca().invert_yaxis()
 plt.grid(axis='x', linestyle='--', alpha=0.7)
 plt.tight_layout()
-plt.show
 
 plt.savefig("missing_values_plot.pdf", format="pdf")
 plt.show()
@@ -164,7 +161,7 @@ sns.heatmap(departments_df.isnull(), #sns to see where missing data exists
             yticklabels=True)
 plt.title("Heatmap of Missing Values")
 plt.tight_layout()
-plt.show
+plt.show()
 
 '''
 heatmap is created!
@@ -191,7 +188,7 @@ Dropped columns with more than %40.06 missing values is:
 
 
 new_missing = (clean_df.isnull().mean()*100).sort_values(ascending=False)
-new_missing_nonzero = new_missing[missing>0]
+new_missing_nonzero = new_missing[new_missing > 0]
 
 plt.figure(figsize=(12,8))
 plt.barh(new_missing_nonzero.index, new_missing_nonzero.values, color="green")
@@ -200,7 +197,7 @@ plt.title("missing data percentage by feature after removing")
 plt.gca().invert_yaxis()
 plt.grid(axis='x', linestyle='--', alpha=0.7)
 plt.tight_layout()
-plt.show
+plt.show()
 
 plt.savefig("new_missing_values_plot.pdf", format="pdf")
 plt.show()
