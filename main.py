@@ -724,7 +724,6 @@ candidate_driver_features = [
     "reporting_frequency",
     "financial_indicator",
     "engagement_score",
-    "risk_index"
 ]
 
 # Keep only features that exist
