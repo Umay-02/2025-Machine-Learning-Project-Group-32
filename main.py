@@ -147,9 +147,7 @@ plt.show()
 
 print("PDF created successfully!")
 
-'''
-PASS
-'''
+
 
 
 
@@ -235,9 +233,7 @@ print(clean_df[['audit_score_q1', 'audit_score_q2', 'compliance_score_final']].i
 #we will have "0"s for output --> that's exactly what we want. The data is cleaned, there is no more missing values.
 #NaN --> missing values, stands for "Not a Number". special value in python to represent missing, undefined, unrecorded data.
 
-'''
-PASS
-'''
+
 
 clean_df['composite_compliance_score'] = clean_df[['audit_score_q1', 'audit_score_q2', 'compliance_score_final']].mean(axis=1)
 #creating a new column called 'composite_compliance_score'.
@@ -256,9 +252,7 @@ print("First 5 rows with new scores:")
 print(clean_df[['audit_score_q1', 'audit_score_q2', 'compliance_score_final', 'composite_compliance_score', 'risk_index']].head())
 #prints. that's all
 
-'''
-PASS
-'''
+
 
 #visulation of how composite_compliance_score is distributed
 
@@ -280,9 +274,7 @@ print("Histogram for 'composite_compliance_score' saved as PDF.")
 #we can see most is densed on 60s. that means that most of our data in composite_complianc_score
 #is around 60s.
 
-'''
-PASS
-'''
+
 
 plt.figure(figsize=(10, 6))
 sns.histplot(clean_df['risk_index'], kde=True, color='red')
@@ -672,9 +664,7 @@ df["is_outlier"] = (
     (df["risk_index"] > upper_bound)
 ).astype(int)
 
-''''
 
-'''
 
 # 4.2) Cluster-level summary (mean risk, compliance, etc.)
 
@@ -709,9 +699,6 @@ if "risk_index_mean" in cluster_summary.columns:
 print("=== Cluster Summary ===")
 print(cluster_summary, "\n")
 
-'''
-
-'''
 
 # 4.3) Key drivers of risk (correlation with risk_index)
 
@@ -745,9 +732,7 @@ plt.ylabel("Feature")
 plt.tight_layout()
 plt.show()
 
-'''
 
-'''
 
 # 4.4) High-risk outliers diagnostic table
 
@@ -770,9 +755,6 @@ print("=== High-Risk Outlier Diagnostic Table (Top 10) ===")
 print(risk_diagnostic.head(10), "\n")
 
 
-'''
-
-'''
 
 # 4.5) Recommendation engine for high-risk departments
 
@@ -836,9 +818,7 @@ if len(high_risk_outliers) > 0:
 else:
     print("No high-risk outliers detected with current IQR thresholds.\n")
 
-'''
 
-'''
 
 # 4.6) Visual dashboard — key plots
 
@@ -869,9 +849,7 @@ if "engagement_score" in df.columns:
     plt.tight_layout()
     plt.show()
 
-'''
 
-'''
 
 # 4.7) Narrative report generation
 
@@ -912,7 +890,5 @@ def build_narrative(cluster_summary, corr, outliers):
 final_report = build_narrative(cluster_summary, corr_with_risk, high_risk_outliers)
 print(final_report)
 
-'''
 
-'''
 
