@@ -13,11 +13,11 @@ from sklearn.metrics import silhouette_score
 
 assert os.path.exists("org_compliance_data.db")
 
-conn = sqlite3.connect("org_compliance_data.db")
-cursor = conn.cursor()
+conn = sqlite3.connect("org_compliance_data.db") #conn is our connection object that opens .db files
+cursor = conn.cursor() #cursor is the tool that actually executes SQL commands on our database
 
 cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
-tables = cursor.fetchall()
+tables = cursor.fetchall() #.fetchall() pulls the results as a list of tuples
 
 for table in tables:
     print(table[0])
