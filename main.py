@@ -70,7 +70,7 @@ with open("Clean_Database_Output.txt", "w", encoding="utf-8") as f:
 conn = sqlite3.connect(r"org_compliance_data.db")
 
 # The error 'no such table: departments' indicates that a table with this name does not exist.
-# Let's first list all available tables in the database to identify the correct one.
+# We list all available tables in the database to identify the correct one.
 cursor = conn.cursor()
 cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
 tables = cursor.fetchall()
@@ -158,7 +158,7 @@ PASS
 
 #creating the heatmap (a little complicated...)
 plt.figure(figsize=(10,10))
-sns.heatmap(departments_df.isnull(),
+sns.heatmap(departments_df.isnull(), #sns to see where missing data exists 
             cbar=True,
             cmap="Reds",
             yticklabels=True)
