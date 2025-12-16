@@ -321,7 +321,7 @@ plt.figure(figsize=(14, 12))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=.5)
 #annot=True: shows the correlation values in each cell
 
-plt.title('Sayısal Özellikler Arası Korelasyon Matrisi')
+plt.title('Correlation Matrix Between Numerical Attributes')
 plt.tight_layout()
 plt.savefig('correlation_heatmap.pdf')
 plt.show()
